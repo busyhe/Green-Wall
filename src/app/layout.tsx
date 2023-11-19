@@ -1,3 +1,5 @@
+// import GitHubStarButton from 'react-github-btn'
+
 import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import Image from 'next/image'
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     images:
       'https://user-images.githubusercontent.com/47730755/188365689-c8bfbccc-01d6-45e7-ae8e-084fbbdce75f.jpg',
   },
-  authors: [{ name: 'LeoKu', url: 'https://github.com/Codennnn' }],
+  authors: [{ name: 'busyhe', url: 'https://github.com/busyhe' }],
 }
 
 export default function Layout(props: React.PropsWithChildren) {
@@ -60,7 +62,6 @@ export default function Layout(props: React.PropsWithChildren) {
                     </span>
                   </span>
                 </Link>
-
                 <GitHubButton />
               </div>
             </header>
@@ -71,10 +72,10 @@ export default function Layout(props: React.PropsWithChildren) {
               <Link
                 passHref
                 className="transition-colors duration-200 hover:text-main-500/90"
-                href="https://github.com/Codennnn"
+                href="https://github.com/busyhe"
                 target="_blank"
               >
-                Made by LeoKu
+                Made by busyhe
               </Link>
               <span className="mx-2 font-medium md:mx-3">·</span>
               <Link className="transition-colors duration-200 hover:text-main-500/90" href="/about">
@@ -82,6 +83,7 @@ export default function Layout(props: React.PropsWithChildren) {
               </Link>
             </footer>
           </div>
+          <script defer src="https://buttons.github.io/buttons.js"></script>
         </body>
       </html>
 

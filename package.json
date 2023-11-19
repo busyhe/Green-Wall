@@ -3,7 +3,7 @@
   "private": true,
   "description": "GitHub contribution graph generator. Review all the contributions you've made to GitHub over the years.",
   "license": "MIT",
-  "author": "LeoKu <leokudev@gmail.com> (https://leoku.dev)",
+  "author": "busyhe <busyhe@qq.com> (https://busyhe.com)",
   "scripts": {
     "build": "next build",
     "deps": "pnpm up --interactive --latest",
@@ -38,6 +38,7 @@
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "prefer-code-style": "1.5.8",
+    "react-github-btn": "^1.4.0",
     "stylelint": "^15.11.0",
     "tailwindcss": "^3.3.5",
     "tslib": "^2.6.2",
