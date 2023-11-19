@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 
 import { BgDecoration } from '~/components/BgDecoration'
 import { GitHubButton } from '~/components/GitHubButton'
@@ -48,6 +49,16 @@ export default function Layout(props: React.PropsWithChildren) {
         className={`h-full overflow-hidden bg-white text-main-800 motion-safe:scroll-smooth ${rubik.className}`}
         lang="en"
       >
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-741CSDN7WG" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-741CSDN7WG');
+        `}
+        </Script>
         <body className="m-0 h-full overflow-y-auto bg-white text-main-700">
           <div className="min-h-screen px-4 sm:px-5 md:mx-auto md:min-w-content md:max-w-content lg:px-0">
             <header>
