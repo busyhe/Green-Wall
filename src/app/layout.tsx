@@ -83,7 +83,6 @@ export default function Layout(props: React.PropsWithChildren) {
               </Link>
             </footer>
           </div>
-          <script defer src="https://buttons.github.io/buttons.js"></script>
         </body>
       </html>
 

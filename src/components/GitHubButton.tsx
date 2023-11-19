@@ -12,11 +12,10 @@ export function GitHubButton() {
       <div className="md:inline-block">
         <GitHubStarButton
           aria-label="Star busyhe/Green-Wall on GitHub"
+          data-icon="octicon-star"
           data-show-count="true"
           href="https://github.com/busyhe/Green-Wall"
-        >
-          Star
-        </GitHubStarButton>
+        />
       </div>
       <Link
         passHref
