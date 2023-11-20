@@ -18,7 +18,7 @@ export function ErrorMessage(props: { errorType?: ErrorType; text?: string }) {
             <TextLink
               passHref
               className="font-bold"
-              href="https://github.com/Codennnn/Green-Wall#running-locally"
+              href="https://github.com/busyhe/Green-Wall#running-locally"
               target="_blank"
             >
               this step

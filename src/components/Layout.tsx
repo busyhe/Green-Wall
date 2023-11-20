@@ -50,7 +50,7 @@ export function Layout(props: React.PropsWithChildren) {
           <Link
             passHref
             className="transition-colors duration-200 hover:text-main-500/90"
-            href="https://github.com/Codennnn"
+            href="https://github.com/busyhe"
             target="_blank"
           >
             Made by LeoKu

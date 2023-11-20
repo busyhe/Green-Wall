@@ -1,10 +1,11 @@
-// import GitHubStarButton from 'react-github-btn'
+import { useEffect } from 'react'
 
 import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
+import splitbee from '@splitbee/web'
 
 import { BgDecoration } from '~/components/BgDecoration'
 import { GitHubButton } from '~/components/GitHubButton'
@@ -43,6 +44,14 @@ export const metadata: Metadata = {
 }
 
 export default function Layout(props: React.PropsWithChildren) {
+  useEffect((): void => {
+    splitbee.init({
+      token: '3E3TINNI9HOB',
+      scriptUrl: '/bee.js',
+      apiUrl: '/_hive',
+    })
+  }, [])
+
   return (
     <>
       <html
