@@ -25,7 +25,7 @@ export default function AboutPage() {
           <TextLink
             passHref
             className="font-bold"
-            href="https://github.com/Codennnn/Green-Wall/blob/3773c0dd49c09be78341a800f97b591b5b219efa/src/pages/api/contribution/%5Busername%5D.ts"
+            href="https://github.com/busyhe/Green-Wall/blob/3773c0dd49c09be78341a800f97b591b5b219efa/src/pages/api/contribution/%5Busername%5D.ts"
             target="_blank"
           >
             this file
@@ -66,7 +66,7 @@ export default function AboutPage() {
         <SectionTitle>Support</SectionTitle>
         <Paragraph>
           Want to show your support for this project? You can star on{' '}
-          <TextLink passHref href="https://github.com/Codennnn/Green-Wall" target="_blank">
+          <TextLink passHref href="https://github.com/busyhe/Green-Wall" target="_blank">
             GitHub
           </TextLink>{' '}
           or vote on{' '}
@@ -79,7 +79,7 @@ export default function AboutPage() {
         <SectionTitle>Reporting issues</SectionTitle>
         <Paragraph>
           Got bugs or have any suggestions for this project? Welcome to leave your message on the{' '}
-          <TextLink passHref href="https://github.com/Codennnn/Green-Wall/issues" target="_blank">
+          <TextLink passHref href="https://github.com/busyhe/Green-Wall/issues" target="_blank">
             GitHub issues.
           </TextLink>
         </Paragraph>
