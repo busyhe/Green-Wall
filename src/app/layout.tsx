@@ -46,7 +46,6 @@ export const metadata: Metadata = {
 export default function Layout(props: React.PropsWithChildren) {
   useEffect((): void => {
     splitbee.init({
-      token: '3E3TINNI9HOB',
       scriptUrl: '/bee.js',
       apiUrl: '/_hive',
     })
