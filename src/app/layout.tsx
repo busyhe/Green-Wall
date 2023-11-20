@@ -1,11 +1,8 @@
-import { useEffect } from 'react'
-
 import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import splitbee from '@splitbee/web'
 
 import { BgDecoration } from '~/components/BgDecoration'
 import { GitHubButton } from '~/components/GitHubButton'
@@ -44,21 +41,14 @@ export const metadata: Metadata = {
 }
 
 export default function Layout(props: React.PropsWithChildren) {
-  useEffect((): void => {
-    splitbee.init({
-      scriptUrl: '/bee.js',
-      apiUrl: '/_hive',
-    })
-  }, [])
-
   return (
     <>
       <html
         className={`h-full overflow-hidden bg-white text-main-800 motion-safe:scroll-smooth ${rubik.className}`}
         lang="en"
       >
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-741CSDN7WG" />
-        <Script id="google-analytics">
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-741CSDN7WG" />
+        <Script async id="google-analytics">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

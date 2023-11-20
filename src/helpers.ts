@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import splitbee from '@splitbee/web'
 
 export function numberWithCommas(num: number): string {
@@ -5,6 +7,15 @@ export function numberWithCommas(num: number): string {
 }
 
 const isDev: boolean = process.env.NODE_ENV === 'development'
+
+export function useAnalytics() {
+  useEffect((): void => {
+    splitbee.init({
+      scriptUrl: '/bee.js',
+      apiUrl: '/_hive',
+    })
+  }, [])
+}
 
 export function trackEvent(
   event: string,

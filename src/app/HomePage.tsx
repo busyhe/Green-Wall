@@ -13,7 +13,7 @@ import Loading from '~/components/Loading'
 import { SettingButton } from '~/components/SettingButton'
 import { ShareButton } from '~/components/ShareButton'
 import { useData } from '~/DataContext'
-import { trackEvent } from '~/helpers'
+import { trackEvent, useAnalytics } from '~/helpers'
 import { useGraphRequest } from '~/useGraphRequest'
 
 export function HomePage() {
@@ -22,6 +22,8 @@ export function HomePage() {
   const graphRef = useRef<HTMLDivElement>(null)
   const actionRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  useAnalytics()
 
   useEffect(() => {
     inputRef.current?.focus()
