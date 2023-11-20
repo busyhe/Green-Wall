@@ -13,7 +13,7 @@ import Loading from '~/components/Loading'
 import { SettingButton } from '~/components/SettingButton'
 import { ShareButton } from '~/components/ShareButton'
 import { useData } from '~/DataContext'
-import { trackEvent, useAnalytics } from '~/helpers'
+import { trackEvent, useAnalytics, userSet } from '~/helpers'
 import { useGraphRequest } from '~/useGraphRequest'
 
 export function HomePage() {
@@ -56,6 +56,7 @@ export function HomePage() {
       reset()
       trackEvent('Click Generate')
       const data = await run({ username })
+      userSet({ displayName: username })
       setGraphData(data)
     }
   }
@@ -199,11 +200,10 @@ export function HomePage() {
                     <button
                       className={`
                       inline-flex h-full items-center rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:pointer-events-none md:text-base
-                      ${
-                        copySuccess
+                      ${copySuccess
                           ? 'bg-accent-100 text-accent-500'
                           : 'bg-main-100 text-main-500 duration-300 hover:bg-main-200 motion-safe:transition-colors'
-                      }
+                        }
                       `}
                       disabled={doingCopy}
                       onClick={() => {

@@ -27,3 +27,11 @@ export function trackEvent(
 
   void splitbee.track(event, data)
 }
+
+export function userSet(data: Record<string, string | number | boolean | undefined | null>): void {
+  if (isDev) {
+    return
+  }
+
+  void splitbee.user.set(data)
+}

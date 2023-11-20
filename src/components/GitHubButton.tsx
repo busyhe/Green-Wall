@@ -9,7 +9,7 @@ import { iconGitHub } from './icons'
 export function GitHubButton() {
   return (
     <div className="ml-auto">
-      <div className="md:inline-block">
+      <div className="inline-block">
         <GitHubStarButton
           aria-label="Star busyhe/Green-Wall on GitHub"
           data-icon="octicon-star"
