@@ -14,11 +14,13 @@ export function ShareButton() {
   const username = graphData?.login
 
   const [shareUrl, setShareUrl] = useState<URL>()
+  const [embedUrl, setEmbedUrl] = useState<URL>()
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
     if (username) {
       const Url = new URL(`${window.location.origin}/share/${username}`)
+      const embedUrl = new URL(`${window.location.origin}/api/embed/share/${username}`)
 
       if (settings.displayName && settings.displayName !== DEFAULT_DISPLAY_NAME) {
         Url.searchParams.set('displayName', settings.displayName)
@@ -40,6 +42,7 @@ export function ShareButton() {
       }
 
       setShareUrl(Url)
+      setEmbedUrl(embedUrl)
     }
   }, [username, settings, firstYear, lastYear])
 
@@ -55,6 +58,19 @@ export function ShareButton() {
               </div>
 
               <div className="-mr-1 mt-4 flex h-7 items-center justify-end gap-x-2">
+                {embedUrl && (
+                  <Link passHref className="h-full" href={embedUrl} target="_blank">
+                    <button
+                      className="flex h-full items-center gap-x-1 rounded bg-main-200 px-2"
+                      onClick={() => {
+                        trackEvent('Embed Share URL')
+                      }}
+                    >
+                      <span>Embed</span>
+                      <span className="w-[10px] translate-y-[1px]">{iconUpRight}</span>
+                    </button>
+                  </Link>
+                )}
                 <Link passHref className="h-full" href={shareUrl} target="_blank">
                   <button
                     className="flex h-full items-center gap-x-1 rounded bg-main-200 px-2"
